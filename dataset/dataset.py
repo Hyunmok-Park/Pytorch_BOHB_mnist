@@ -13,11 +13,11 @@ from torch.utils.data import Dataset
 class DataSet(Dataset):
     def __init__(self, split='train'):
         if split == "train":
-            fp_image = open('train-images-idx3-ubyte','rb')
-            fp_label = open('train-labels-idx1-ubyte','rb')
+            fp_image = open('dataset/train-images-idx3-ubyte','rb')
+            fp_label = open('dataset/train-labels-idx1-ubyte','rb')
         else:
-            fp_image = open('t10k-images-idx3-ubyte','rb')
-            fp_label = open('t10k-labels-idx1-ubyte','rb')
+            fp_image = open('dataset/t10k-images-idx3-ubyte','rb')
+            fp_label = open('dataset/t10k-labels-idx1-ubyte','rb')
 
         s = fp_image.read(16)
         l = fp_label.read(8)
